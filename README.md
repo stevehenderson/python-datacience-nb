@@ -18,6 +18,14 @@ docker run -it -v /home/myuser/dev/project/:/home/analyst -p8889:8888 henderso/p
 
 Check the output in the terminal.   It will show the URL and token for connecting to the notebook.
 
+If you want to run the container in the background:
+
+```
+docker run -d -v /home/myuser/dev/project/:/home/analyst -p8889:8888 henderso/python-datascience-nb
+```
+
+Then use `docker ps` to get the `container_name` and then `docker logs container_name` to see the connection log.
+
 ##  Building
 
 You can rebuild the container to meet your needs as follows:
